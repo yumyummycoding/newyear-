@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해피뉴이어라능~</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #b5e1fd;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #000000;;
+            font-size: 2.5rem;
+        }
+
+        button {
+            background-color: #2a14d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #000ceb;
+        }
+
+        .message {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>하이헬로~~ 나는 지혜라능</h2>
+    <img src="jihye.jpg" width="20%";>
+    <h1>🐉 올해는 푸른용의 해~~✨</h1>
+    <h3><br>많이 많이 도전하고 많이 행복하고 
+        <br>맛있는 것도 자안뜩 먹는
+        <br>한해가 되길!!
+    </h3>
+    <button onclick="showMessage()">지혜표 새해운세뽑기</button>
+    <div class="message" id="messageBox"></div>
+
+    <script>
+        // 새해 인삿말 배열
+        const messages = [
+            "귀욤아 너가 하는 일 모두 잘될거야!!😊",
+            "올해에는 멋진 남자친구가 생긴다능 🎉",
+            "당신의 퍼스널 컬러는 지혜라능🌟",
+            "2024보다 행복이 100배 늘어날거야!! 💖",
+            "럭키비키잖아! 로또 사보는 건 어떻니?? 🍀",
+            "지혜와 함께 할 시간이 2024보다 늘어날 운명! ✨"
+        ];
+
+        // 랜덤 인삿말 출력 함수
+        function showMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            const messageBox = document.getElementById("messageBox");
+            messageBox.textContent = messages[randomIndex];
+        }
+    </script>
+</body>
+</html>
